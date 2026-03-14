@@ -3,7 +3,7 @@
 A fully functional, pixel-perfect recreation of the iOS calculator. This project serves as a deep dive into **JavaScript state management**, complex conditional logic, and the implementation of high-fidelity UI/UX.
 
 ## 🚀 Live Demo
-[https://yz-calculator.vercel.app](https://yz-calculator.vercel.app)
+[Link To Deployed Site](i-os-calculator-clone-b179os8wd-yasojans-projects.vercel.app)
 
 ## 🛠️ Tech Stack
 - **HTML5**: Structured using semantic button elements and a clean display output.
