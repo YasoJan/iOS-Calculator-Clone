@@ -100,6 +100,7 @@ percent.addEventListener("click", () =>{
     num2 = num2/100;
     visual.textContent = num2;
   }
+  limitDisplay();
 });
 
 const division = document.querySelector(".division");
@@ -118,6 +119,7 @@ division.addEventListener("click", () =>{
     visual.textContent = num1;
   }
   operator = "/";
+  limitDisplay();
 });
 
 const seven = document.querySelector(".seven");
@@ -144,6 +146,7 @@ seven.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 const eight = document.querySelector(".eight");
@@ -170,6 +173,7 @@ eight.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 const nine = document.querySelector(".nine");
@@ -196,6 +200,7 @@ nine.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 const multiplication = document.querySelector(".multiplication");
@@ -213,6 +218,7 @@ multiplication.addEventListener("click", () =>{
     visual.textContent = num1;
   }
   operator = "*";
+  limitDisplay();
 });
 
 const four = document.querySelector(".four");
@@ -239,6 +245,7 @@ four.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 const five = document.querySelector(".five");
@@ -265,6 +272,7 @@ five.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 const six = document.querySelector(".six");
@@ -291,6 +299,7 @@ six.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 
@@ -310,7 +319,7 @@ subtraction.addEventListener("click", () =>{
     visual.textContent = num1;
   }
   operator = "-";
-
+  limitDisplay();
 });
 
 const one = document.querySelector(".one");
@@ -337,6 +346,7 @@ one.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 const two = document.querySelector(".two");
@@ -363,6 +373,7 @@ two.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 const three = document.querySelector(".three");
@@ -389,6 +400,7 @@ three.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 
@@ -407,6 +419,7 @@ addition.addEventListener("click", () =>{
     visual.textContent = num1;
   }
   operator = "+";
+  limitDisplay();
 });
 
 const zero = document.querySelector(".zero");
@@ -433,6 +446,7 @@ zero.addEventListener("click", () =>{
     }
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 const decimal = document.querySelector(".decimal");
 decimal.addEventListener("click", () =>{
@@ -453,6 +467,7 @@ decimal.addEventListener("click", () =>{
       visual.textContent = num1;
     }
   }
+  limitDisplay();
 });
 
 const equal = document.querySelector(".equal");
@@ -464,26 +479,15 @@ equal.addEventListener("click", () =>{
     operator = "";
     visual.textContent = num1;
   }
+  limitDisplay();
 });
 
 
 
-
-
-
-
-
-
-/*
-Logic
-
-operations():
-  if an operation has already been executed
-    find the total of the two number
-    reset both numbers
-  otherwise
-
-
-number buttons()
-
-*/
+function limitDisplay(){
+  let value = visual.textContent;
+  if(value.toString().split("").length > 8){
+    value = value.slice(0, 8);
+  }
+  visual.textContent = value;
+};
